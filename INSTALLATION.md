@@ -1,6 +1,12 @@
 # Venom Linux Installation Guide
 A comprehensive installation guide for Venom Linux
 
+### Minimum System Requirements
+- x86_64 CPU
+- 4 GB RAM (System Memory)
+- 100 GB of Disk Space
+- CD/DVD drive or a USB port for the installer media
+
 ### Getting Started
 Venom Linux provides a few live installer images that contain a installer.
 These live images come with a full desktop enviornement and basic applications configured for that environment.
@@ -47,4 +53,8 @@ In general live sessions will be less responsive on a CD or DVD than with a USB 
 Boot your machine using the previously-created installation medium. This can be done by starting the computer and press ESC, F1, F2, F8 or F10 during the initial startup screen depending on the BIOS manufacturer. A menu may appear giving you the option to give a CD/DVD or USB drive boot sequence priority over the hard drive, move it to the first position in the list. You can choose to run the live image from the media, or, if you have the resources available, you can load the contents of the image into RAM. This option takes some time at the beginning but provides a quicker installation procedure.
 
 Once the live image has booted you need to check if you have a working internet connection.
-Venom Linux does not have a graphical installar to start the installer you open the a terminal, the default terminal that comes with the Destop Enviornement is fine. To start the installer run the command: `
+Venom Linux does not have a graphical installar to start the installer you open the a terminal, the default terminal that comes with the Destop Enviornement is fine. To start the installer run the command `sudo venom-installer` when prompted for a password type in *root* and hit enter to start the installer.
+
+### Installing Venom Linux
+
+When the installer starts you are greeted by a curses menu 
