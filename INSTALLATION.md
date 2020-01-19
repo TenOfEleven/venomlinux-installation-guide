@@ -61,5 +61,9 @@ Venom Linux does not have a graphical installar to start the installer you open 
 
 ### Installing Venom Linux
 
-When the installer starts you are greeted by a curses menu, the following section will detail each screen of the installer
+When the installer starts you are greeted by a curses menu, the following section will detail each screen of the installer.
+
+### Keyboard
+Select the keymap for your keyboard
+
 
