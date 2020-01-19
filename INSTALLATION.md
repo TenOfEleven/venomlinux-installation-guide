@@ -62,8 +62,104 @@ Venom Linux does not have a graphical installar to start the installer you open 
 ### Installing Venom Linux
 
 When the installer starts you are greeted by a curses menu, the following section will detail each screen of the installer.
+![Installer Meny](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/05%20-%20Installer%20Menu.png)
 
-### Keyboard
-Select the keymap for your keyboard
+#### Keyboard
+Select the keymap for your keyboard, for example us for US QWERTY keyboard:
+![Set Keyboard](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/06%20-%20Set%20Keyboard.png) 
 
+#### Partitioning
+When Partition Disk is selected from the Installer Menu you are greeted with a handy tip in regards to partitioning your disk for BIOS and EFI Systems. After the tip you are promted to run cfdisk to create your partitions.
+![Partition Tips](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/08%20-%20Partition%20Tips.png)
 
+![Run Cfdisk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/09%20-%20Run%20cfdisk.png)
+
+Select the disk you want to partition for your Venom Linux install
+![Choose Disk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/10%20-%20Choose%20Disk.png)
+
+Select a Partition Label type with regards to your system as was hinted in the Partition Tip; GPT for EFI systems
+![Select Label](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/11%20-%20Select%20Label%20Type.png)
+
+Create your partitions as you see fit; by default the Venom Linux installer does not allow you to mount any other partitions then the root partition. But you can create any partition you would like to use in cfdisk. If you want to have seperate partitions for example /home or /var, you need to manually mount the partition and copy /home to the newly mounted partition.
+This is outside of the scope of this guide.
+![Change Partition Type](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/13%20-%20Change%20Partition%20Type%20for%20swap.png)
+
+To create a SWAP partition in cfdisk you need to alter the partition type
+![Select Partition Type SWAP](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/14%20-%20Select%20Partition%20Type%20for%20swap.png)
+
+**Don't forget to write your changes to disk before you quit cfdisk.**
+When you have wrote your changes to disk and you have quit cfdisk it's time to choose the partition you want Venom to live in.
+![Choose Disk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/16%20-%20Choose%20Partition.png)
+
+Select the filesystem of this disk:
+![Select Filesystem](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/17%20-%20Select%20Filesystem.png)
+
+The Venom Installer will detect your SWAP partition if you gave it the correct type during partitioning with cfdisk.
+![SWAP Found](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/18%20-%20swap%20Partition%20Found.png)
+
+You are presented with the choice of SWAP partitions to choose from.
+![Choose SWAP Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/19%20-%20Choose%20swap%20Partition.png)
+
+#### Set Timezone
+After this is done you can choose Set Timezone from the Venom Linux Installer menu.
+Select your timezone accordingly.
+![Set Timezone](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/21%20-%20Select%20Timezone.png)
+
+#### Hostname
+Set Hostname and type the hostname for your machine.
+![Host Name](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/23%20-%20Enter%20Hostname.png)
+
+**Set-Up a User Account**
+Set User Account by entering a login name and a password, you will be prompted to retype the password.
+![Set User Account](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/24%20-%20Set%20User%20Account.png)
+
+![Login Name](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/25%20-%20Enter%20Login%20Name.png)
+
+![User Password](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/26%20-%20Enter%20User%20Password.png)
+
+![Confirm User Password](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/27%20-%20Confirm%20User%20Password.png)
+
+#### Set Password for Root
+Set Root Password is similar to setting up the user with the difference being that no login name is needed.
+![Root Password](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/29%20-%20Enter%20Root%20Password.png)
+
+![Confirm Root Password](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/30%20-%20Confirm%20Root%20Password.png)
+
+#### Set-Up Grub
+Next up is setting up grub; 
+![Bootloader](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/31%20-%20Bootloader.png)
+
+Unless you really know what you are doing it is highly recommended to install the grub bootloader.
+So select yes in this section.
+![Install Grub](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/32%20-%20Install%20Bootloader.png)
+
+The installer will ask where we want to install our bootloader.
+Select the device your Venom Linux installer will live in; for example it's /dev/sda (notice that there is no number after sda, which is correct).
+![Choose Disk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/33%20-%20Choose%20Disk%20for%20Bootloader.png)
+
+#### View Settings
+Last but not least you will get a chance to review your selected settings before you let the installer run.
+It's important to pay attention here and check wetter or not everything has been setup correctly.
+Note that if you are not installing on an EFI system the EFI section will be marked to SKIP in the installer.
+Obviously if you are installing on an EFI system this will present a value.
+![View Settings](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/34%20-%20View%20Saved%20Settings.png)
+
+![Saved Settings](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/35%20-%20Saved%20Settings.png)
+
+#### Install Venom
+After you have verified that the settings you have saved are correct you can let the installer do it's work;
+![install](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/36%20-%20Install.png)
+
+The installer will ask if you really want to continue with the installation
+![Confirm Install](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/37%20-%20Continue%20with%20Installation.png)
+
+Once Yes is selected the installer will start installing Venom Linux on your system with the settings as you have selected and reviewed. Just let the installer run and do it's work.
+![installation Progress](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/38%20-%20Installation%20in%20Process.png)
+
+You will get a notification when the installation is complete.
+The installer will ask for a reboot, just hit enter to select OK.
+![Installer Done](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/39%20-%20installation%20Done.png)
+
+You will be dropped back to a commandline prompt; since you are still root a simple reboot command will reboot your system and will bring you back to your newly installed Void Linux.
+
+Enjoy!
