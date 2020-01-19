@@ -1,6 +1,10 @@
 # Venom Linux Installation Guide
 A comprehensive installation guide for Venom Linux
 
+### No Warrenty, Use At Your Own Risc
+Venom Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+
 ### Minimum System Requirements
 - x86_64 CPU
 - 4 GB RAM (System Memory)
@@ -57,4 +61,5 @@ Venom Linux does not have a graphical installar to start the installer you open 
 
 ### Installing Venom Linux
 
-When the installer starts you are greeted by a curses menu 
+When the installer starts you are greeted by a curses menu, the following section will detail each screen of the installer
+
