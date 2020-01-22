@@ -160,6 +160,6 @@ You will get a notification when the installation is complete.
 The installer will ask for a reboot, just hit enter to select OK.
 ![Installer Done](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/39%20-%20installation%20Done.png)
 
-You will be dropped back to a commandline prompt; since you are still root a simple reboot command will reboot your system and will bring you back to your newly installed Void Linux.
+You will be dropped back to a commandline prompt; since you are still root a simple reboot command will reboot your system and will bring you back to your newly installed Venom Linux.
 
 Enjoy!
