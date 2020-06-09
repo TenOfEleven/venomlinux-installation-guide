@@ -36,8 +36,7 @@ Now you are ready to write the downloaded iso to your USB drive, we will use the
 **Warning: use the dd command with caution as it will overwrite any data on the USB drive.**
 
 `sudo dd if=/home/username/Downloads/venom-xfce4-20191002.iso of=/dev/sdx bs=4M && sync`
-Change the command to let dd find the iso in the correct directory and change the image name and device name of this example to the correct image name and device name. Note sdx, do **not** use partitions i.e. sdb1, sdc1, etc.
-The *sync* command at the end will flush all data.
+Change the command to let dd find the iso in the correct directory and change the image name and device name of this example to the correct image name and device name. Note sdx, do **not** use partitions i.e. sdb1, sdc1, etc. instead use sdb, sdc, etc. The *sync* command at the end will flush all data.
 dd will not print any output until the process is completed (or if it failed). 
 Depending on your device, this process can take a few minutes.
 
@@ -57,7 +56,7 @@ In general live sessions will be less responsive on a CD or DVD than with a USB 
 Boot your machine using the previously-created installation medium. This can be done by starting the computer and press ESC, F1, F2, F8 or F10 during the initial startup screen depending on the BIOS manufacturer. A menu may appear giving you the option to give a CD/DVD or USB drive boot sequence priority over the hard drive, move it to the first position in the list. You can choose to run the live image from the media, or, if you have the resources available, you can load the contents of the image into RAM. This option takes some time at the beginning but provides a quicker installation procedure.
 
 Once the live image has booted you need to check if you have a working internet connection.
-Venom Linux does not have a graphical installar to start the installer you open the a terminal, the default terminal that comes with the Destop Enviornement is fine. To start the installer run the command `sudo venom-installer` when prompted for a password type in *root* and hit enter to start the installer.
+Venom Linux does not have a graphical installar to start the installer you open the a terminal, the default terminal that comes with the Destop Enviornement is fine. To start the installer run the command `sudo venom-installer` whenhttp://venomlinux.org/ prompted for a password type in *root* and hit enter to start the installer.
 
 ### Installing Venom Linux
 
