@@ -56,7 +56,9 @@ In general live sessions will be less responsive on a CD or DVD than with a USB 
 Boot your machine using the previously-created installation medium. This can be done by starting the computer and press ESC, F1, F2, F8 or F10 during the initial startup screen depending on the BIOS manufacturer. A menu may appear giving you the option to give a CD/DVD or USB drive boot sequence priority over the hard drive, move it to the first position in the list. You can choose to run the live image from the media, or, if you have the resources available, you can load the contents of the image into RAM. This option takes some time at the beginning but provides a quicker installation procedure.
 
 Once the live image has booted you need to check if you have a working internet connection.
-Venom Linux does not have a graphical installar to start the installer you open the a terminal, the default terminal that comes with the Destop Enviornement is fine. To start the installer run the command `sudo venom-installer` whenhttp://venomlinux.org/ prompted for a password type in *root* and hit enter to start the installer.
+Venom Linux does not have a graphical installar. To start the installer you open a terminal, the default terminal that comes with the Destop Enviornement is fine. To start the installer run the command `sudo venom-installer` alternatively you can become root by typing 'su -' at the terminal prompt, when prompted for a password type in *root* and hit enter to start the installer.
+
+**Note: on newer ISO images it is not necessary to open a terminal. There should be an install icon (Venom logo) on the desktop. Double clicking this icon will conveniently launch the installer in a new terminal window.**
 
 ### Installing Venom Linux
 
