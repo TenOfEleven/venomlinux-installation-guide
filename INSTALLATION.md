@@ -134,6 +134,15 @@ Select your timezone accordingly.
 Set Hostname and type the hostname for your machine.
 ![Host Name](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/23%20-%20Enter%20Hostname.png)
 
+#### Set locale
+![Set Locale](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_08_12.png)
+
+I will choose "en_US" choose yours accordingly.
+![Locale](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_08_46.png)
+
+Select your tim.
+![Select Time](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_08_58.png)
+
 **Set-Up a User Account**
 Set User Account by entering a login name and a password, you will be prompted to retype the password.
 ![Set User Account](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/24%20-%20Set%20User%20Account.png)
@@ -169,7 +178,7 @@ Note that if you are not installing on an EFI system the EFI section will be mar
 Obviously if you are installing on an EFI system this will present a value.
 ![View Settings](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/34%20-%20View%20Saved%20Settings.png)
 
-![Saved Settings](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/35%20-%20Saved%20Settings.png)
+![Saved Settings](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_11_46.png)
 
 #### Install Venom
 After you have verified that the settings you have saved are correct you can let the installer do it's work;
