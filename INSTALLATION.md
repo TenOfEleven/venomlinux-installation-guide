@@ -63,7 +63,7 @@ Venom Linux does not have a graphical installar. To start the installer you open
 ### Installing Venom Linux
 
 When the installer starts you are greeted by a curses menu, the following section will detail each screen of the installer.
-![Installer Meny](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/05%20-%20Installer%20Menu.png)
+![Installer Meny](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_21_56_16.png)
 
 #### Keyboard
 Select the keymap for your keyboard, for example us for US QWERTY keyboard:
@@ -81,25 +81,33 @@ Select the disk you want to partition for your Venom Linux install
 Select a Partition Label type with regards to your system as was hinted in the Partition Tip; GPT for EFI systems
 ![Select Label](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/11%20-%20Select%20Label%20Type.png)
 
-Create your partitions as you see fit; by default the Venom Linux installer does not allow you to mount any other partitions then the root partition. But you can create any partition you would like to use in cfdisk. If you want to have seperate partitions for example /home or /var, you need to manually mount the partition and copy /home to the newly mounted partition.
-This is outside of the scope of this guide.
-![Change Partition Type](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/13%20-%20Change%20Partition%20Type%20for%20swap.png)
+Create your partitions as you see fit.
+In this example we are creating a root partiton, a home partition and a SWAP partition.
+![Change Partition Type](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_00_33.png)
+
+(https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_17.png)
 
 To create a SWAP partition in cfdisk you need to alter the partition type
 ![Select Partition Type SWAP](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/14%20-%20Select%20Partition%20Type%20for%20swap.png)
 
+(https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_41.png)
+
 **Don't forget to write your changes to disk before you quit cfdisk.**
+(https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_02_23.png)
+
 When you have wrote your changes to disk and you have quit cfdisk it's time to choose the partition you want Venom to live in.
-![Choose Disk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/16%20-%20Choose%20Partition.png)
+![Choose Disk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_02_53.png)
+
+(https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_03_11.png)
 
 Select the filesystem of this disk:
-![Select Filesystem](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/17%20-%20Select%20Filesystem.png)
+![Select Filesystem](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_03_30.png)
 
 The Venom Installer will detect your SWAP partition if you gave it the correct type during partitioning with cfdisk.
-![SWAP Found](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/18%20-%20swap%20Partition%20Found.png)
+![SWAP Found](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_04_03.png)
 
 You are presented with the choice of SWAP partitions to choose from.
-![Choose SWAP Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/19%20-%20Choose%20swap%20Partition.png)
+![Choose SWAP Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_04_16.png)
 
 #### Set Timezone
 After this is done you can choose Set Timezone from the Venom Linux Installer menu.
