@@ -63,7 +63,7 @@ Venom Linux does not have a graphical installar. To start the installer you open
 ### Installing Venom Linux
 
 When the installer starts you are greeted by a curses menu, the following section will detail each screen of the installer.
-![Installer Meny](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_21_56_16.png)
+![Installer Menu](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_21_56_16.png)
 
 #### Keyboard
 Select the keymap for your keyboard, for example us for US QWERTY keyboard:
@@ -85,20 +85,20 @@ Create your partitions as you see fit.
 In this example we are creating a root partiton, a home partition and a SWAP partition.
 ![Change Partition Type](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_00_33.png)
 
-(https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_17.png)
+![Partitions](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_17.png)
 
 To create a SWAP partition in cfdisk you need to alter the partition type
 ![Select Partition Type SWAP](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/14%20-%20Select%20Partition%20Type%20for%20swap.png)
 
-(https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_41.png)
+![Type](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_41.png)
 
 **Don't forget to write your changes to disk before you quit cfdisk.**
-(https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_02_23.png)
+![Write](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_02_23.png)
 
 When you have wrote your changes to disk and you have quit cfdisk it's time to choose the partition you want Venom to live in.
 ![Choose Disk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_02_53.png)
 
-(https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_03_11.png)
+![Format](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_03_11.png)
 
 Select the filesystem of this disk:
 ![Select Filesystem](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_03_30.png)
@@ -108,6 +108,22 @@ The Venom Installer will detect your SWAP partition if you gave it the correct t
 
 You are presented with the choice of SWAP partitions to choose from.
 ![Choose SWAP Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_04_16.png)
+
+The installer will ask if you would like to setup another partition. In our example we created a /home partition, this is the time and place to set it up.
+![Setup Another Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_05_04.png)
+
+![Choose Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_05_26.png)
+
+![Mount Point](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_06_09.png)
+
+![File System Select](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_06_18.png)
+
+We are presented with the option to setup yet another partition. In this case we will choose "No" as we didn't created any other partition besides /home. If you created a dedicated partition for e.g. /var this would be the place to set that up.
+![Setup Another Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_06_44.png)
+**Note: If you select "Yes" and there is no other partition to setup the installer will skip and move forward to the next step**
+
+After done etting up partitions we get a small summery of the partitons we just setup. The root partition is not included in this small overview because root is basically needed to have Venom installed.
+![Partition Overview](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_06_57.png)
 
 #### Set Timezone
 After this is done you can choose Set Timezone from the Venom Linux Installer menu.
