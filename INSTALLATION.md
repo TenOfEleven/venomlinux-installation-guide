@@ -14,12 +14,12 @@ permitted by applicable law.
 ### Getting Started
 Venom Linux provides a few live installer images that contain a installer.
 These live images come with a full desktop enviornement and basic applications configured for that environment.
-MATE, Xfce4, LXDE and LXQT are available in addition to these flavours Venom Linux provides a Xorg-only iso and a base image.
+MATE, Xfce4, LXDE and LXQT are available in addition to these flavors Venom Linux provides a Xorg-only iso and a base image.
 The base image provides a minimal set of packages to install and setup a Venom Linux system.
 
 All the installation images can be downloaded from the [Venom Linux Website](http://venomlinux.org/download.html)
-It is advised to verify the mdsum of the downloaded iso file.
-If the mdsum matches you can move forward and either burn the iso image on a CD/DVD or create a bootable USB drive.
+It is advised to verify the mdsum of the downloaded iso file; e.g. `md5sum venom-xfce4-20200602.iso`
+If the mdsum matches with the mdsum on the [download](https://venomlinux.org/download.html) page of the Venom Linux website you can move forward and either burn the iso image on a CD/DVD or create a bootable USB drive.
 
 ### Creating a Bootable USB drive on Linux
 Identify you USB drive with *fdisk* by opening your favorite terminal emulator and typing:
@@ -53,10 +53,10 @@ In general live sessions will be less responsive on a CD or DVD than with a USB 
 
 ### Booting up
 
-Boot your machine using the previously-created installation medium. This can be done by starting the computer and press ESC, F1, F2, F8 or F10 during the initial startup screen depending on the BIOS manufacturer. A menu may appear giving you the option to give a CD/DVD or USB drive boot sequence priority over the hard drive, move it to the first position in the list. You can choose to run the live image from the media, or, if you have the resources available, you can load the contents of the image into RAM. This option takes some time at the beginning but provides a quicker installation procedure.
+Boot your machine using the previously-created installation medium. Depending on the BIOS manufacturer this can be done by starting the computer and press ESC, F1, F2, F8, F10 or F12 during the initial startup screen. A menu may appear giving you the option to give a CD/DVD or USB drive boot sequence priority over the hard drive, move it to the first position in the list. Or select the installation device (CD/DVD or USB). You can choose to run the live image from the media, or, if you have the resources available, you can load the contents of the image into RAM. This option takes some time at the beginning but provides a quicker installation procedure.
 
 Once the live image has booted you need to check if you have a working internet connection.
-Venom Linux does not have a graphical installar. To start the installer you open a terminal, the default terminal that comes with the Destop Enviornement is fine. To start the installer run the command `sudo venom-installer` alternatively you can become root by typing 'su -' at the terminal prompt, when prompted for a password type in *root* and hit enter to start the installer.
+Venom Linux does not have a graphical installar. To start the installer you open a terminal, the default terminal that comes with the Destop Enviornement is fine. To start the installer run the command `sudo venom-installer` alternatively you can become root by typing `su -` at the terminal prompt, when prompted for a password type in *root* and then run the command `venom-installer`.
 
 **Note: on newer ISO images it is not necessary to open a terminal. There should be an install icon (Venom logo) on the desktop. Double clicking this icon will conveniently launch the installer in a new terminal window.**
 
@@ -95,34 +95,41 @@ To create a SWAP partition in cfdisk you need to alter the partition type
 **Don't forget to write your changes to disk before you quit cfdisk.**
 ![Write](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_02_23.png)
 
-When you have wrote your changes to disk and you have quit cfdisk it's time to choose the partition you want Venom to live in.
+When you have written the changes to disk and you have quit cfdisk it's time to choose the partition you want Venom to live in.
 ![Choose Disk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_02_53.png)
 
+Format the partition.
 ![Format](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_03_11.png)
 
-Select the filesystem of this disk:
+Select the filesystem of this partition:
 ![Select Filesystem](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_03_30.png)
 
-The Venom Installer will detect your SWAP partition if you gave it the correct type during partitioning with cfdisk.
+The Venom Installer will detect your SWAP partition if you gave it the correct type during partitioning.
 ![SWAP Found](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_04_03.png)
 
-You are presented with the choice of SWAP partitions to choose from.
+Select the SWAP partitions:
 ![Choose SWAP Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_04_16.png)
 
-The installer will ask if you would like to setup another partition. In our example we created a /home partition, this is the time and place to set it up.
+The installer will ask if you would like to setup another partition.
+In our example we created a */home* partition, this is the time and place to set it up.
 ![Setup Another Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_05_04.png)
 
+Choose the partition you would like to use.
 ![Choose Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_05_26.png)
 
+Type /honme
 ![Mount Point](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_06_09.png)
 
+Select the file system for this partition,
 ![File System Select](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_06_18.png)
 
-We are presented with the option to setup yet another partition. In this case we will choose "No" as we didn't created any other partition besides /home. If you created a dedicated partition for e.g. /var this would be the place to set that up.
+We are presented with the option to setup yet another partition. In this case we will choose "No" as we didn't created any other partition besides /home. If you created a dedicated partition e.g. /var this would be the place to set that up.
 ![Setup Another Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_06_44.png)
+
 **Note: If you select "Yes" and there is no other partition to setup the installer will skip and move forward to the next step**
 
-After done etting up partitions we get a small summery of the partitons we just setup. The root partition is not included in this small overview because root is basically needed to have Venom installed.
+After done setting up partitions we get a small summery of the partitons we just setup.
+The root partition is not included in this small overview because root is basically needed to have Venom installed.
 ![Partition Overview](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_06_57.png)
 
 #### Set Timezone
@@ -137,10 +144,10 @@ Set Hostname and type the hostname for your machine.
 #### Set locale
 ![Set Locale](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_08_12.png)
 
-I will choose "en_US" choose yours accordingly.
+For example "en_US" choose yours accordingly.
 ![Locale](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_08_46.png)
 
-Select your tim.
+Select your time.
 ![Select Time](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_08_58.png)
 
 **Set-Up a User Account**
@@ -187,13 +194,13 @@ After you have verified that the settings you have saved are correct you can let
 The installer will ask if you really want to continue with the installation
 ![Confirm Install](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/37%20-%20Continue%20with%20Installation.png)
 
-Once Yes is selected the installer will start installing Venom Linux on your system with the settings as you have selected and reviewed. Just let the installer run and do it's work.
+Once Yes is selected the installer will start installing Venom Linux on your system with the settings as you have selected and reviewed. Let the installer run.
 ![installation Progress](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/38%20-%20Installation%20in%20Process.png)
 
 You will get a notification when the installation is complete.
 The installer will ask for a reboot, just hit enter to select OK.
 ![Installer Done](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/39%20-%20installation%20Done.png)
 
-You will be dropped back to a commandline prompt; since you are still root a simple reboot command will reboot your system and will bring you back to your newly installed Venom Linux.
+You will be dropped back to a commandline prompt; if you are root a simple `reboot` command will do, if not run `sudo reboot` to reboot your system. Congrats! You have succesfully installed Venom Linux.
 
 Enjoy!
