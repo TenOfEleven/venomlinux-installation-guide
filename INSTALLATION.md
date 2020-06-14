@@ -87,6 +87,7 @@ Select the disk you want to partition for your Venom Linux install
 Select a Partition Label type with regards to your system as was hinted in the Partition Tip earlier.
 
 **For BIOS systems** 
+
 Select dos label type
 ![Select Label](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/11%20-%20Select%20Label%20Type.png)
 
@@ -97,6 +98,7 @@ In this example we are creating a root partiton, a home partition and a SWAP par
 ![Partitions](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_17.png)
 
 **For UEFI systems**
+
 Select GPT label type
 ![GPT Label](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_02_40.png)
 
@@ -107,14 +109,14 @@ Change the partition type of the 100 ~ 200 MB partition to EFI System.
 ![EFI System](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_03_58.png)
 
 **For both UEFI as well as BIOS**
+
 Create a SWAP partition; to create a SWAP partition in cfdisk you need to alter the partition type
 ![Select Partition Type SWAP](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/14%20-%20Select%20Partition%20Type%20for%20swap.png)
 
 ![GPT Partitions Overview](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_05_06.png)
 
-![Type](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_41.png)
-
 **Don't forget to write your changes to disk before you quit cfdisk.**
+
 ![Write](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_02_23.png)
 
 When you have written the changes to disk and you have quit cfdisk it's time to choose the partition you want Venom to live in.
