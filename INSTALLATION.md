@@ -70,10 +70,12 @@ Select the keymap for your keyboard, for example us for US QWERTY keyboard:
 ![Set Keyboard](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/06%20-%20Set%20Keyboard.png) 
 
 #### Partitioning
-When Partition Disk is selected from the Installer Menu you are greeted with a handy tip in regards to partitioning your disk for BIOS and EFI Systems. For BIOS systems MBR partition table is recommended (dos label type). For EFI paritions a GPT GPT partition table is required. Also a FAT32 partition with at least 100 MB - 200 MB is a safe choice. This partition should be set as type EFI.
+When Partition Disk is selected from the Installer Menu you are greeted with a handy tip in regards to partitioning your disk for BIOS and EFI Systems. For BIOS systems MBR partition table is recommended (dos label type). 
+For EFI paritions a GPT GPT partition table is required. 
+Also a FAT32 partition with at least 100 MB - 200 MB is a safe choice. This partition should be set as type EFI.
 ![Partition Tips](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/08%20-%20Partition%20Tips.png)
 
-This guide will walk you through setting up partitions for both BIOS and UEFI systems.
+This guide will walk you through setting up partitions for both BIOS as well as for UEFI systems.
 
 ### Paritioning for BIOS systems
 
@@ -84,7 +86,8 @@ Select the disk you want to partition for your Venom Linux install
 
 Select a Partition Label type with regards to your system as was hinted in the Partition Tip earlier.
 
-*For BIOS systems select dos label type*
+**For BIOS systems** 
+Select dos label type
 ![Select Label](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/11%20-%20Select%20Label%20Type.png)
 
 Create your partitions as you see fit.
@@ -93,7 +96,8 @@ In this example we are creating a root partiton, a home partition and a SWAP par
 
 ![Partitions](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_17.png)
 
-*For UEFI select GPT label type*
+**For UEFI systems**
+Select GPT label type
 ![GPT Label](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_02_40.png)
 
 Create your partitions as you see fit but remember to create a dedicated partition of at least 100 MB for EFI.
@@ -102,10 +106,11 @@ Create your partitions as you see fit but remember to create a dedicated partiti
 Change the partition type of the 100 ~ 200 MB partition to EFI System.
 ![EFI System](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_03_58.png)
 
-![GPT Partitions Overview](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_05_06.png)
-
-To create a SWAP partition in cfdisk you need to alter the partition type
+**For both UEFI as well as BIOS**
+Create a SWAP partition; to create a SWAP partition in cfdisk you need to alter the partition type
 ![Select Partition Type SWAP](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/14%20-%20Select%20Partition%20Type%20for%20swap.png)
+
+![GPT Partitions Overview](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_05_06.png)
 
 ![Type](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_41.png)
 
