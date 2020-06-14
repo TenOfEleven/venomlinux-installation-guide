@@ -72,13 +72,13 @@ Select the keymap for your keyboard, for example us for US QWERTY keyboard:
 #### Partitioning
 When Partition Disk is selected from the Installer Menu you are greeted with a handy tip in regards to partitioning your disk for BIOS and EFI Systems. For BIOS systems MBR partition table is recommended (dos label type). 
 For EFI paritions a GPT GPT partition table is required. 
-Also a FAT32 partition with at least 100 MB - 200 MB is a safe choice. This partition should be set as type EFI.
+Also a FAT32 partition with at least 100 MB - 200 MB is a safe choice.
+This partition should be set as type EFI.
 ![Partition Tips](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/08%20-%20Partition%20Tips.png)
 
 This guide will walk you through setting up partitions for both BIOS as well as for UEFI systems.
 
-### Paritioning for BIOS systems
-
+Select either cfdisk or fdisk to partition your disk. cfdisk is a bit more user-friendly compared to fdisk.
 ![Run Cfdisk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/09%20-%20Run%20cfdisk.png)
 
 Select the disk you want to partition for your Venom Linux install
@@ -86,7 +86,7 @@ Select the disk you want to partition for your Venom Linux install
 
 Select a Partition Label type with regards to your system as was hinted in the Partition Tip earlier.
 
-**For BIOS systems** 
+##### For BIOS systems 
 
 Select dos label type
 ![Select Label](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/11%20-%20Select%20Label%20Type.png)
@@ -97,7 +97,7 @@ In this example we are creating a root partiton, a home partition and a SWAP par
 
 ![Partitions](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_01_17.png)
 
-**For UEFI systems**
+##### For UEFI systems
 
 Select GPT label type
 ![GPT Label](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_02_40.png)
@@ -108,10 +108,10 @@ Create your partitions as you see fit but remember to create a dedicated partiti
 Change the partition type of the 100 ~ 200 MB partition to EFI System.
 ![EFI System](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_03_58.png)
 
-**For both UEFI as well as BIOS**
+##### For both UEFI as well as BIOS**
 
 Create a SWAP partition; to create a SWAP partition in cfdisk you need to alter the partition type
-![Select Partition Type SWAP](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/14%20-%20Select%20Partition%20Type%20for%20swap.png)
+![Select Partition Type SWAP](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/14%20-%20Select%20Partition%20TypVee%20for%20swap.png)
 
 ![GPT Partitions Overview](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_05_06.png)
 
@@ -119,7 +119,11 @@ Create a SWAP partition; to create a SWAP partition in cfdisk you need to alter 
 
 ![Write](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_02_23.png)
 
-When you have written the changes to disk and you have quit cfdisk it's time to choose the partition you want Venom to live in.
+If you have set-up your partitions for UEFI system (GPT partition table and 100 ~ 200 MB EFI partition) the Venom Installer will detect this and will prompt you to choose the EFI partition.
+If you have set up your partitions for a BIOS system (MBR) then the installer will obviously skip this step.
+![EFI Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_05_30.png)
+
+When you have written the changes to disk it's time to choose the partition you want Venom to live in.
 ![Choose Disk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_02_53.png)
 
 Format the partition.
@@ -147,7 +151,7 @@ Type /honme
 Select the file system for this partition,
 ![File System Select](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_06_18.png)
 
-We are presented with the option to setup yet another partition. In this case we will choose "No" as we didn't created any other partition besides /home. If you created a dedicated partition e.g. /var this would be the place to set that up.
+We are presented with the option to setup yet another partition. In this case we will choose "No" as we didn't created any other partition besides /home. If you created a dedicated partition for e.g. /var this would be the place to set that up.
 ![Setup Another Partition](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_06_44.png)
 
 **Note: If you select "Yes" and there is no other partition to setup the installer will skip and move forward to the next step**
@@ -198,16 +202,18 @@ Unless you really know what you are doing it is highly recommended to install th
 So select yes in this section.
 ![Install Grub](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/32%20-%20Install%20Bootloader.png)
 
-The installer will ask where we want to install our bootloader.
+The installer will ask where you want to install the bootloader.
 Select the device your Venom Linux installer will live in; for example it's /dev/sda (notice that there is no number after sda, which is correct).
 ![Choose Disk](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/33%20-%20Choose%20Disk%20for%20Bootloader.png)
 
 #### View Settings
 Last but not least you will get a chance to review your selected settings before you let the installer run.
-It's important to pay attention here and check wetter or not everything has been setup correctly.
-Note that if you are not installing on an EFI system the EFI section will be marked to SKIP in the installer.
-Obviously if you are installing on an EFI system this will present a value.
+It's important to pay attention here and check if everything has been setup correctly.
+Note that if you are **not** installing on an EFI system the EFI section will be marked SKIP.
+Obviously if you are installing on an EFI system this will present a value; e.g. /dev/sda1.
 ![View Settings](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/34%20-%20View%20Saved%20Settings.png)
+
+![View Settings EFI](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_13_06_2020_20_08_51.png)
 
 ![Saved Settings](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/VirtualBox_Test%20Machine_10_06_2020_22_11_46.png)
 
@@ -218,7 +224,7 @@ After you have verified that the settings you have saved are correct you can let
 The installer will ask if you really want to continue with the installation
 ![Confirm Install](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/37%20-%20Continue%20with%20Installation.png)
 
-Once Yes is selected the installer will start installing Venom Linux on your system with the settings as you have selected and reviewed. Let the installer run.
+Once Yes is selected the installer will start installing Venom Linux on your system with the settings as you have selected and reviewed.
 ![installation Progress](https://github.com/TenOfEleven/venomlinux-installation-guide/blob/master/38%20-%20Installation%20in%20Process.png)
 
 You will get a notification when the installation is complete.
